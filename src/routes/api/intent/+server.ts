@@ -3,8 +3,6 @@ import { Configuration, OpenAIApi } from 'openai';
 import { env } from '$env/dynamic/private';
 
 console.log(env)
-console.log('===================================')
-console.log(process.env)
 
 const configuration = new Configuration({
 	apiKey: env.OPEN_AI_APIKEY,
