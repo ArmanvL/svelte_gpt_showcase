@@ -2,8 +2,7 @@ import { error } from '@sveltejs/kit';
 import { Configuration, OpenAIApi } from 'openai';
 
 const configuration = new Configuration({
-	// apiKey: process.env.OPENAI_API_KEY,
-	apiKey: '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'
+	apiKey: process.env.OPENAI_API_KEY,
 });
 
 const openai = new OpenAIApi(configuration);
