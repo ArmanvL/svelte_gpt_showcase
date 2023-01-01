@@ -1,6 +1,8 @@
 import { error } from '@sveltejs/kit';
 import { Configuration, OpenAIApi } from 'openai';
 
+console.log(process.env);
+
 const configuration = new Configuration({
 	// apiKey: process.env.OPENAI_API_KEY,
 	apiKey: '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'
@@ -45,6 +47,7 @@ export async function GET({ url }) {
 
 		return new Response(JSON.stringify({ result: result.trim(), totalTokens }));
 	} catch (error) {
+		console.error(error);
 		return new Response(JSON.stringify({ type: 'error', message: 'Something went wrong when generating the intent model' }));
 	}
 }
