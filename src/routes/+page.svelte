@@ -416,7 +416,6 @@
 	$: {
 		if (generatedEntity !== '') {
 			entityGenerated = true;
-			console.log(generatedEntity);
 		}
 	}
 

@@ -2,13 +2,9 @@ import { error } from '@sveltejs/kit';
 import { Configuration, OpenAIApi } from 'openai';
 import { env as envdyn } from '$env/dynamic/private';
 
-console.log('dynamic', envdyn.OPEN_AI_APIKEY)
-
 const configuration = new Configuration({
 	apiKey: envdyn.OPENAI_API_KEY,
 });
-
-console.log(configuration)
 
 const openai = new OpenAIApi(configuration);
 
@@ -47,7 +43,6 @@ export async function GET({ url }) {
 
 		return new Response(JSON.stringify({ result: result.trim(), totalTokens }));
 	} catch (err) {
-		console.error(err.response.data);
 		throw error(400, { message: 'Something went wrong when generating the response' })
 	}
 }

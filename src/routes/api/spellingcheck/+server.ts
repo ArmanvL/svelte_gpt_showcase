@@ -18,8 +18,6 @@ export async function GET({ url }) {
 			instruction: 'Fix grammar and spelling'
 		});
 
-		console.log(response.data);
-
 		const {
 			choices,
 			usage: {
