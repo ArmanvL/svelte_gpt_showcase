@@ -1,3 +1,8 @@
+# Introduction
+A small showcase around OpenAI's GPT-3 model and some (potentially) relevant use cases in the customer service domain.
+
+## Improvement points
+Break down singe +page.svelte into separate components
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
