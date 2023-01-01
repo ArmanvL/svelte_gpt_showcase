@@ -1,12 +1,11 @@
 import { error } from '@sveltejs/kit';
 import { Configuration, OpenAIApi } from 'openai';
 import { env as envdyn } from '$env/dynamic/private';
-import { OPEN_AI_APIKEY } from '$env/static/private';
 
 console.log('dynamic', envdyn)
 
 const configuration = new Configuration({
-	apiKey: OPEN_AI_APIKEY,
+	apiKey: envdyn.OPEN_AI_APIKEY,
 });
 
 const openai = new OpenAIApi(configuration);
